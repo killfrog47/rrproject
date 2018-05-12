@@ -15,6 +15,7 @@ This is a CLI tool built to speed up dev time on projects. I found myself using 
 - [ ] Add ability to use a link to download boilerplate zip
 - [ ] Compress (zip) boilerplates in lib
 - [ ] Add wordpress boilerplate
+- [ ] Expand to be used with require
 
 I plan to add more boilerplates to the tool as soon as I find out which ones I need. The more features the better so feel free to open up an issue on github with the feature request.
 
