@@ -17,6 +17,8 @@
     "co-prompt": "^1.0.0",
     "colors": "^1.2.5",
     "commander": "^2.15.1",
-    "inquirer": "^5.2.0"
+    "global-modules-path": "^2.1.0",
+    "inquirer": "^5.2.0",
+    "ncp": "^2.0.0"
   }
 }

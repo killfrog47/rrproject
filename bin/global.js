@@ -4,6 +4,8 @@ let fs = require('fs');
 let program = require('commander');
 let inquirer = require('inquirer');
 let colors = require('colors');
+let ncp = require('ncp').ncp;
+let pathToPackage = require("global-modules-path").getPath('rrproject');
 
 program.version('0.0.1', '-v, --version')
     .arguments('<dir>')
@@ -17,14 +19,24 @@ program.version('0.0.1', '-v, --version')
 					type: 'list',
 					name: 'siteType',
 					message: 'What type of site are you building?',
-					choices: ['Small Site'],
-					when: function(answers) {
-						return answers.comments !== 'Nope, all good!';
-					}
+					choices: ['Small Site']
 				}
 			]).then(answers => {
-				console.log(answers.siteType);
-				// TODO: copy to dir
+				var selectedDir;
+				switch(answers.siteType){
+					case 'Small Site':
+						selectedDir = 'small-site';
+						break;
+					default:
+						selectedDir = 'small-site';
+				}
+				ncp.limit = 16;
+				ncp(pathToPackage + '\\lib\\' + selectedDir, dir, function (err) {
+					if (err) {
+						return console.error(colors.red(err));
+					}
+					console.log(colors.green(answers.siteType + ' has been created in directory: ' + dir));
+				});
 			});
 		}else{
 			fs.readdir(dir, function(err, files) {
@@ -38,7 +50,31 @@ program.version('0.0.1', '-v, --version')
 						}
 					]).then(answers => {
 						if(answers.useExistingDir){
-							// TODO: copy to dir
+							inquirer.prompt([
+								{
+									type: 'list',
+									name: 'siteType',
+									message: 'What type of site are you building?',
+									choices: ['Small Site']
+								}
+							]).then(answers => {
+								var selectedDir;
+								switch(answers.siteType){
+									case 'Small Site':
+										selectedDir = 'small-site';
+										break;
+									default:
+										selectedDir = 'small-site';
+								}
+								ncp.limit = 16;
+								ncp(pathToPackage + '\\lib\\' + selectedDir, dir, function (err) {
+									if (err) {
+										return console.error(colors.red(err));
+									}
+									console.log(colors.green(answers.siteType + ' has been created in directory: ' + dir));
+								});
+							});
+
 						}
 					});
 				}else{
