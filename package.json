@@ -1,8 +1,8 @@
 {
   "name": "rrproject",
   "version": "1.0.0",
-  "description": "A tool to download predefined files to act as a starting point in new projects (websites/apps)",
-  "main": "./lib/index.js",
+  "description": "This is a tool to create project boiler plates. It has the stuff I use the most when creating landing pages but anything can be added as a boiler plate. Just create a directory in lib and add it to the bin/global.js",
+  "main": "./bin/global.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +10,20 @@
     "rrproject": "./bin/global.js"
   },
   "preferGlobal": true,
+  "homepage": "https://github.com/killfrog47/rrproject",
+  "bugs" : "https://github.com/killfrog47/rrproject/issues",
   "author": "Tomas Cordero",
+  "email" : "tcorderoiv@gmail.com",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/killfrog47/rrproject.git"
+  },
   "license": "MIT",
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
   "dependencies": {
-    "co": "^4.6.0",
-    "co-prompt": "^1.0.0",
     "colors": "^1.2.5",
     "commander": "^2.15.1",
     "global-modules-path": "^2.1.0",

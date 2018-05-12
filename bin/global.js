@@ -6,8 +6,9 @@ let inquirer = require('inquirer');
 let colors = require('colors');
 let ncp = require('ncp').ncp;
 let pathToPackage = require("global-modules-path").getPath('rrproject');
+let pjson = require('../package.json');
 
-program.version('0.0.1', '-v, --version')
+program.version(pjson.version, '-v, --version')
     .arguments('<dir>')
     // .option('-s, --simple-html', 'Simple site with basic html, css (sass), js and images')
     // .option('-wp, --wordpress', 'Basic starting wordpress site (includes full WP install)')
