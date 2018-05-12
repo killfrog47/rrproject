@@ -1,0 +1,20 @@
+{
+  "name": "rrproject",
+  "version": "1.0.0",
+  "description": "A tool to download predefined files to act as a starting point in new projects (websites/apps)",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "rrproject": "./bin/global.js"
+  },
+  "preferGlobal": true,
+  "author": "Tomas Cordero",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.15.1"
+  }
+}

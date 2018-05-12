@@ -1,0 +1,29 @@
+{
+  "name": "simple-website-starter",
+  "version": "1.0.0",
+  "description": "This is just a simple starting boiler plate to start learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killfrog47/simple-website-starter.git"
+  },
+  "author": "Tomas Cordero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/killfrog47/simple-website-starter/issues"
+  },
+  "homepage": "https://github.com/killfrog47/simple-website-starter#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.0",
+    "foundation-sites": "^6.4.4-rc1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.1"
+  }
+}
