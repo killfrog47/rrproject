@@ -1,6 +1,6 @@
 {
   "name": "rrproject",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a tool to create project boiler plates. It has the stuff I use the most when creating landing pages but anything can be added as a boiler plate. Just create a directory in lib and add it to the bin/global.js",
   "main": "./bin/global.js",
   "scripts": {
